@@ -60,6 +60,8 @@ if __name__ == "__main__":
 
     print([i.value for i in single])
 
+    print(type(single))
+
 
     
     
