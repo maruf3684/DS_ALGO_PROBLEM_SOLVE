@@ -25,3 +25,10 @@ print("pos 6", findbit(n,6))
 print("pos 7", findbit(n,7))
 print("pos 8", findbit(n,8))
 print(bin(n))
+
+
+
+a="kkk"
+
+for i in range(len(a)):
+    print(a[i])
