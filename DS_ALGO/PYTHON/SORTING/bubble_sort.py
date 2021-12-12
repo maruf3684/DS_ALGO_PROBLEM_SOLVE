@@ -7,3 +7,8 @@ for i in range(arr.__len__()):
             arr[j],arr[j+1] = arr[j+1],arr[j]
 
 print(arr)
+
+
+
+
+
