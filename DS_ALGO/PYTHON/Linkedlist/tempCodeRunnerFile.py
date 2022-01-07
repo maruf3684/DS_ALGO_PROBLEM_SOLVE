@@ -1,0 +1,6 @@
+    # list2 = Linklist()
+    # list2.insertFirst(1)
+    # list2.insertFirst(2)
+    # list2.insertFirst(3)
+    # list2.insertFirst(4)
+    # list2.display()
