@@ -16,8 +16,6 @@ def marge(left,right):
             k+=1
             j+=1
  
-     
-
     while(i<left.__len__()):
             arr2.insert(k,left[i])
             k+=1
