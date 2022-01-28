@@ -4,14 +4,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-function ParamDecorator(target, propertykey, parameterIndex) {
+function NameDecorator(target, propertykey) {
     console.log(target);
     console.log(propertykey);
-    console.log(parameterIndex);
-    console.log(".......................");
+    //descriptor.writable=false
+    //decorator.js:29 Uncaught TypeError: Cannot assign to read only property 'print' of object '#<Tool>'
 }
 class Tool {
     constructor(name) {
@@ -21,13 +18,13 @@ class Tool {
     price() {
         console.log("$200");
     }
-    print(isTrue, printNumber) {
-        console.log(isTrue);
+    print() {
+        console.log("Printing tool");
     }
 }
 __decorate([
-    __param(0, ParamDecorator)
-], Tool.prototype, "print", null);
+    NameDecorator
+], Tool.prototype, "name", void 0);
 const tool = new Tool("hammer");
-tool.print("yes", 10);
+console.log(tool.name);
 export {};

@@ -1,24 +1,22 @@
 export {};
 
-function ParamDecorator(
+function NameDecorator(
 	target: any,
 	propertykey: string,
-	parameterIndex: number
 ) {
 	console.log(target);
 	console.log(propertykey);
-	console.log(parameterIndex);
-	console.log(".......................");
-	
+	//descriptor.writable=false
+	//decorator.js:29 Uncaught TypeError: Cannot assign to read only property 'print' of object '#<Tool>'
 }
 
 class Tool {
-
+	@NameDecorator
 	public name: string;
-
+	
 	constructor(name: string) {
 		console.log("constractor called");
-
+		
 		this.name = name;
 	}
 
@@ -26,13 +24,12 @@ class Tool {
 		console.log("$200");
 	}
 
-	print(@ParamDecorator isTrue:string,printNumber:number): void {
-		console.log(isTrue);
+
+	print(): void {
+		console.log("Printing tool");
 	}
 }
 
 const tool = new Tool("hammer");
-
-tool.print("yes",10)
-
+console.log(tool.name);
 
