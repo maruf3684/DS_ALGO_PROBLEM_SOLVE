@@ -3,14 +3,14 @@ console.log("start");
 function getParam(name, callback) {
 	setTimeout(function () {
 		console.log("inside timeout");
-		return callback("md." + name);
+		 callback("md." + name);
 	}, 2000);
 }
 
 function getParam2(fullname, callback) {
 	setTimeout(function () {
 		console.log("inside timeout 2");
-		return callback(["coading", "cricket"]);
+		 callback(["coading", "cricket"]);
 	}, 2000);
 }
 
